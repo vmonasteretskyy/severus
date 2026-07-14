@@ -1,0 +1,36 @@
+header.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 12;
+    min-height: 104px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(270deg, #000E0A 0%, #0D4A3E 49%, #000E0A 100%);
+    font-family: "Outfit", sans-serif;
+}
+
+.header__nav {
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 53px;
+        
+    }
+
+    a {
+        text-decoration: none;
+        color: rgba(#FFFFFF, 0.7);
+        font-size: 18px;
+        line-height: 100%;
+    }
+}
+
+.header__contacts {
+    text-align: right;
+}
