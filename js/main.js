@@ -157,8 +157,10 @@ jQuery(document).ready(function ($) {
             items.forEach(function (item, i) {
                 item.classList.toggle('is-open', i === index);
             });
+            // усі до активної включно лишаються відкритими (шари стосом),
+            // наступні — сховані зверху й виїжджають при досягненні
             images.forEach(function (img, i) {
-                img.classList.toggle('is-active', i === index);
+                img.classList.toggle('is-active', i <= index);
             });
         }
 
@@ -299,11 +301,88 @@ jQuery(document).ready(function ($) {
     var swiper = new Swiper('.results-slider', {
         slidesPerView: 2.5,
         spaceBetween: 20,
+        // slidesPerView: 'auto',
+        loop: true,
+        speed: 900,
 
-        // navigation: {
-        //     nextEl: '.swiper-button-next',
-        //     prevEl: '.swiper-button-prev',
-        // },
+        navigation: {
+            nextEl: '.swiper-button-next.results-slider__next',
+            prevEl: '.swiper-button-prev.results-slider__prev',
+        },
+
+        breakpoints: {
+            991: {
+                slidesPerView: 2.2,
+                spaceBetween: 20,
+            },
+            1200: {
+                slidesPerView: 2.2,
+                spaceBetween: 40,
+            },
+            1500: {
+                slidesPerView: 2.8,
+                spaceBetween: 20,
+            },
+        },
+    });
+
+    // testimonials — вертикальний слайдер
+    new Swiper('.testimonials-slider', {
+        direction: 'vertical',
+        slidesPerView: 2,
+        spaceBetween: 10,
+        mousewheel: true,
+        loop: true,
+        speed: 700,
+        centeredSlides: true,
+
+        breakpoints: {
+            991: {
+                slidesPerView: 1.6,
+                spaceBetween: 20,
+            },
+            1200: {
+                slidesPerView: 1.8,
+                spaceBetween: 10,
+            },
+            1500: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+            },
+        },
+    });
+
+    // FAQ accordion
+    $('.cqsect').on('click', '.cqsect__header', function () {
+        var $item = $(this).closest('.cqsect__item');
+        var $body = $item.find('.cqsect__body');
+        var $others = $item.siblings('.cqsect__item');
+
+        if ($item.hasClass('active')) {
+            $item.removeClass('active');
+            $body.stop(true, true).slideUp(300);
+            return;
+        }
+
+        $others.removeClass('active').find('.cqsect__body').stop(true, true).slideUp(300);
+        $item.addClass('active');
+        $body.stop(true, true).slideDown(300);
+    });
+
+    // плавний скрол до якоря
+    $('.scrolltoid').on('click', function (e) {
+        var href = $(this).attr('href');
+        if (!href || href.charAt(0) !== '#') return;
+
+        var $target = $(href);
+        if (!$target.length) return;
+
+        e.preventDefault();
+
+        var headerOffset = $('header.header').outerHeight() || 0;
+        var scrollTop = $target.offset().top - headerOffset;
+
+        $('html, body').stop(true).animate({ scrollTop: scrollTop }, 700);
     });
 
 });

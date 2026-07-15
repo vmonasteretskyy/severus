@@ -11,6 +11,12 @@ header.header {
     font-family: "Outfit", sans-serif;
 }
 
+.header__logo {
+    img {
+        max-width: 100%;
+    }
+}
+
 .header__nav {
     ul {
         list-style: none;
@@ -20,7 +26,7 @@ header.header {
         justify-content: center;
         align-items: center;
         gap: 53px;
-        
+
     }
 
     a {
@@ -28,9 +34,44 @@ header.header {
         color: rgba(#FFFFFF, 0.7);
         font-size: 18px;
         line-height: 100%;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: #00B393;
+        }
+
+        &:active {
+            color: #008F75;
+        }
     }
 }
 
 .header__contacts {
     text-align: right;
+}
+
+@media(max-width:1499.8px) {
+    header.header {
+        min-height: 90px;   
+    }
+
+    .header__nav ul {
+        gap: 30px;
+    }
+
+}
+
+@media(max-width:1199.8px) {
+    .header__nav ul {
+        gap: 20px;
+
+        a {
+            font-size: 16px;
+        }
+    }
+
+    .header__logo {
+        max-width: 180px;
+    }
+
 }
