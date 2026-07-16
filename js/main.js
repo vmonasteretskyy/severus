@@ -178,7 +178,9 @@ jQuery(document).ready(function ($) {
             ticking = false;
 
             if (!mq.matches) {
-                var triggerY = window.innerHeight * 0.45;
+                // раніше відкриваємо вкладку (25% висоти екрана),
+                // щоб контент не з'являвся вже проскроленим
+                var triggerY = window.innerHeight * 0.75;
                 var active = 0;
 
                 items.forEach(function (item, i) {
