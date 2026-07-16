@@ -299,9 +299,9 @@ jQuery(document).ready(function ($) {
 
     // results - slider
     var swiper = new Swiper('.results-slider', {
-        slidesPerView: 2.5,
+        slidesPerView: 1,
         spaceBetween: 20,
-        // slidesPerView: 'auto',
+        autoHeight: true,
         loop: true,
         speed: 900,
 
@@ -311,17 +311,25 @@ jQuery(document).ready(function ($) {
         },
 
         breakpoints: {
+            575: {
+                slidesPerView: 1.2,
+                autoHeight: false,
+            },
+            767: {
+                slidesPerView: 1.6,
+                autoHeight: false,
+            },
             991: {
                 slidesPerView: 2.2,
-                spaceBetween: 20,
+                autoHeight: false,
             },
             1200: {
                 slidesPerView: 2.2,
-                spaceBetween: 40,
+                autoHeight: false,
             },
             1500: {
                 slidesPerView: 2.8,
-                spaceBetween: 20,
+                autoHeight: false,
             },
         },
     });
@@ -329,15 +337,17 @@ jQuery(document).ready(function ($) {
     // testimonials — вертикальний слайдер
     new Swiper('.testimonials-slider', {
         direction: 'vertical',
-        slidesPerView: 2,
+        slidesPerView: 1.1,
         spaceBetween: 10,
         mousewheel: true,
         loop: true,
         speed: 700,
         centeredSlides: true,
+        
 
         breakpoints: {
-            991: {
+            
+            575: {
                 slidesPerView: 1.6,
                 spaceBetween: 20,
             },
@@ -384,5 +394,54 @@ jQuery(document).ready(function ($) {
 
         $('html, body').stop(true).animate({ scrollTop: scrollTop }, 700);
     });
+
+    // mobmenu
+    function openMobileMenu() {
+        $('.mobile-menu-col, .menu-overlay').addClass('open');
+        // $('body').addClass('menu-open');
+    }
+
+    function closeMobileMenu() {
+        $('.mobile-menu-col, .menu-overlay').removeClass('open');
+        // $('body').removeClass('menu-open');
+    }
+
+    $('.burger-btn').click(openMobileMenu);
+    $('.close-menu, .menu-overlay').click(closeMobileMenu);
+
+    // cookie notice
+    (function initCookieNotice() {
+        var $notice = $('#cookie-notice');
+        if (!$notice.length) return;
+
+        var storageKey = 'severus_cookie_consent';
+
+        function hideNotice() {
+            $notice.removeClass('is-visible').attr('aria-hidden', 'true');
+        }
+
+        function showNotice() {
+            $notice.addClass('is-visible').attr('aria-hidden', 'false');
+        }
+
+        function saveConsent(value) {
+            try {
+                localStorage.setItem(storageKey, value);
+            } catch (e) {}
+            hideNotice();
+        }
+
+        if (!localStorage.getItem(storageKey)) {
+            showNotice();
+        }
+
+        $notice.on('click', '.cookie-notice__btn--accept', function () {
+            saveConsent('accepted');
+        });
+
+        $notice.on('click', '.cookie-notice__btn--reject', function () {
+            saveConsent('rejected');
+        });
+    })();
 
 });

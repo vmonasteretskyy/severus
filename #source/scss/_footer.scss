@@ -267,3 +267,50 @@
     }
 
 }
+
+@media(max-width:991.8px) {
+
+    .footer__leftside {
+        margin-bottom: 30px;
+
+        p {
+            max-width: 400px;
+        }
+    }
+
+    .footer.footer--home {
+        padding: 70px 0 50px;
+    }
+
+
+}
+
+@media(max-width:767.8px) {
+    .footer-bottsection {
+        p {
+            order: 2;
+        }
+
+        .footer__sociallist {
+            order: 1;
+        }
+    }
+
+    .footer-bottsection .footer__sociallist {
+        margin-bottom: 20px;
+    }
+}
+
+@media(max-width:575.8px) {
+    .footer__column {
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+    }
+
+    .footer__wrapper {
+        row-gap: 30px;
+    }
+
+    
+
+}

@@ -25,7 +25,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-xl-8 col-lg-6">
+                <div class="col-xl-8 col-lg-6 mobile-menu-col">
                     <nav class="header__nav">
                         <uL>
                             <li><a href="#">What We Do</a></li>
@@ -35,6 +35,17 @@
                             <li><a href="#">Benefits</a></li>
                         </uL>
                     </nav>
+                    <div class="header__contacts header__contacts--mobile">
+                        <a href="#" class="mainbtn mainbtn_green">
+                            Talk to Us
+                            <span>
+                                <img src="img/arrow-btn.svg" alt="icon">
+                            </span>
+                        </a>
+                    </div>
+                    <button class="close-menu">
+                        <img src="img/close.png" alt="icon">
+                    </button>
                 </div>
                 <div class="col-xl-2 col-lg-3">
                     <div class="header__contacts">
@@ -47,7 +58,11 @@
                     </div>
                 </div>
             </div>
+            <button type="button" class="burger-btn" aria-label="Open menu" aria-expanded="false" aria-controls="header-nav">
+                <img src="img/menu.png" alt="">
+            </button>
         </div>
+        <div class="menu-overlay" aria-hidden="true"></div>
     </header>
 
     <main class="main main-home">
@@ -245,7 +260,7 @@
                 </div>
                 <div class="services__wrapper">
                     <div class="row">
-                        <div class="col-lg-3">
+                        <div class="col-lg-3 col-sm-6">
                             <div class="services__item">
                                 <a href="#" class="services__item-link">
                                     <span>Read more</span>
@@ -262,7 +277,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-3 col-sm-6">
                             <div class="services__item">
                                 <a href="#" class="services__item-link">
                                     <span>Read more</span>
@@ -280,7 +295,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-3 col-sm-6">
                             <div class="services__item">
                                 <a href="#" class="services__item-link">
                                     <span>Read more</span>
@@ -299,7 +314,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-3 col-sm-6">
                             <div class="services__item">
                                 <a href="#" class="services__item-link">
                                     <span>Read more</span>
@@ -317,7 +332,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-3 col-sm-6">
                             <div class="services__item">
                                 <a href="#" class="services__item-link">
                                     <span>Read more</span>
@@ -335,7 +350,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-3 col-sm-6">
                             <div class="services__item">
                                 <a href="#" class="services__item-link">
                                     <span>Read more</span>
@@ -353,7 +368,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-3 col-sm-6">
                             <div class="services__item">
                                 <a href="#" class="services__item-link">
                                     <span>Read more</span>
@@ -371,7 +386,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-3 col-sm-6">
                             <div class="services__item">
                                 <a href="#" class="services__item-link">
                                     <span>Read more</span>
@@ -791,7 +806,7 @@
                     </div>
                 </div>
                 <div class="row stats-lg">
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-sm-6">
                         <div class="stats-lg__item">
                             <p class="title">12+</p>
                             <p>
@@ -799,7 +814,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-sm-6">
                         <div class="stats-lg__item">
                             <p class="title">47+</p>
                             <p>
@@ -809,7 +824,7 @@
                     </div>
                 </div>
                 <div class="row stats-sm">
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-6">
                         <div class="stats-sm__item">
                             <p>
                                 Delivering services for the<br>
@@ -817,14 +832,14 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-6">
                         <div class="stats-sm__item">
                             <p>
                                 <span>Nurturing business strategies</span> instead of expanding systems blindly.
                             </p>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-6">
                         <div class="stats-sm__item">
                             <p>
                                 Focusing on <span>organic ROI &<br>
@@ -888,10 +903,12 @@
                                     </div>
                                     <div class="swiper-slide">
                                         <article class="testimonials__card">
-                                            <p class="testimonials__text">Everything was delivered on time, and all of
+                                            <p class="testimonials__text">
+                                                Everything was delivered on time, and all of
                                                 our needs were successfully covered. Their project management was good,
                                                 consistently meeting deadlines and promptly responding to our needs,
-                                                demonstrating their commitment to a well-executed project</p>
+                                                demonstrating their commitment to a well-executed project
+                                            </p>
                                             <div class="testimonials__author">
                                                 <img src="img/testimonial-avatar.png" alt="Dean Winchester"
                                                     class="testimonials__avatar">
@@ -949,7 +966,7 @@
                     and Building Smarter <span>Businesses</span>
                 </h2>
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-6">
                         <a href="#" class="product__item">
                             <div class="imgwrap">
                                 <img src="img/product1.jpg" alt="product">
@@ -969,7 +986,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-6">
                         <a href="#" class="product__item">
                             <div class="imgwrap">
                                 <img src="img/product2.jpg" alt="product">
@@ -990,7 +1007,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-6">
                         <a href="#" class="product__item">
                             <div class="imgwrap">
                                 <img src="img/product3.jpg" alt="product">
@@ -1035,7 +1052,7 @@
                     </div>
                 </div>
                 <div class="row experts__list justify-content-center">
-                    <div class="col-xl-3 col-lg-4">
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
                         <article class="experts__item">
                             <div class="experts__photo">
                                 <img src="img/expert1.jpg" alt="Olena Bochulia">
@@ -1062,7 +1079,7 @@
                             </div>
                         </article>
                     </div>
-                    <div class="col-xl-3 col-lg-4">
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
                         <article class="experts__item">
                             <div class="experts__photo">
                                 <img src="img/expert2.jpg" alt="Olena Bochulia">
@@ -1089,7 +1106,7 @@
                             </div>
                         </article>
                     </div>
-                    <div class="col-xl-3 col-lg-4">
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
                         <article class="experts__item">
                             <div class="experts__photo">
                                 <img src="img/expert3.jpg" alt="Olena Bochulia">
@@ -1116,7 +1133,7 @@
                             </div>
                         </article>
                     </div>
-                    <div class="col-xl-3 col-lg-4">
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
                         <article class="experts__item">
                             <div class="experts__photo">
                                 <img src="img/expert4.jpg" alt="Olena Bochulia">
@@ -1143,7 +1160,7 @@
                             </div>
                         </article>
                     </div>
-                    <div class="col-xl-3 col-lg-4">
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
                         <article class="experts__item">
                             <div class="experts__photo">
                                 <img src="img/expert5.jpg" alt="Olena Bochulia">
@@ -1169,7 +1186,7 @@
                             </div>
                         </article>
                     </div>
-                    <div class="col-xl-3 col-lg-4">
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
                         <article class="experts__item">
                             <div class="experts__photo">
                                 <img src="img/expert6.jpg" alt="Olena Bochulia">
@@ -1195,7 +1212,7 @@
                             </div>
                         </article>
                     </div>
-                    <div class="col-xl-3 col-lg-4">
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
                         <article class="experts__item">
                             <div class="experts__photo">
                                 <img src="img/expert7.jpg" alt="Olena Bochulia">
@@ -1592,6 +1609,26 @@
 
 
     </footer>
+
+    <div class="cookie-notice is-visible" id="cookie-notice" aria-hidden="true">
+        <div class="cookie-notice__inner">
+            <div class="cookie-notice__content">
+                <span class="cookie-notice__emoji" aria-hidden="true">🍪</span>
+                <h2 class="cookie-notice__title">Cookie Notice</h2>
+                <p class="cookie-notice__text">We use cookies to improve your browsing experience, analyze site performance, and personalize content. You can accept or manage your preferences below.</p>
+                <a href="#" class="cookie-notice__link">See our privacy policy</a>
+            </div>
+            <div class="cookie-notice__actions">
+                <button type="button" class="cookie-notice__btn cookie-notice__btn--reject">Reject</button>
+                <button type="button" class="cookie-notice__btn cookie-notice__btn--accept">
+                    Allow cookies
+                    <span>
+                        <img src="img/arrow-btn.svg" alt="icon">
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
 
     <script src="js/lib/jquery.js"></script>
     <script src="js/lib/swiper-bundle.min.js"></script>

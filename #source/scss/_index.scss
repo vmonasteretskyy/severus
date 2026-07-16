@@ -1038,13 +1038,16 @@
     }
 }
 
-.swiper-wrapper {
-    align-items: center;
+.results-slider__wrapper {
+    .swiper-wrapper {
+        align-items: center;
+    }
+
+    .swiper-slide {
+        transition: 0.7s;
+    }
 }
 
-.swiper-slide {
-    transition: 0.7s;
-}
 
 .results-slider__item .imgwrap {
     transition: 0.7s;
@@ -2011,6 +2014,7 @@
 
 
 
+
 @media(max-width:1499.8px) {
     .main-home {
         padding-top: 90px;
@@ -2496,7 +2500,8 @@
     .section--impact,
     .section--trust,
     .section--testimonials,
-    .section--products {
+    .section--products,
+    .section--experts {
         padding: 70px 0;
     }
 
@@ -2532,7 +2537,8 @@
     .section__header p,
     .sound-familiar__content h3,
     .stats-lg__item p,
-    .testimonials__info p {
+    .testimonials__info p,
+    .cqsect__body p {
         font-size: 21px;
     }
 
@@ -2562,4 +2568,453 @@
     .testimonials__text {
         font-size: 18px;
     }
+}
+
+@media(max-width:991.8px) {
+    .section--hero {
+        padding: 70px 0 50px;
+    }
+
+    .hero__intro {
+        padding-top: 0;
+    }
+
+    .video-col__wrapper {
+        max-width: 100%;
+        display: block;
+        margin-top: 30px;
+    }
+
+    .hero__video-btn-glow,
+    .hero__video-btn-ring--lg,
+    .hero__video-btn-ring--md {
+        display: none;
+    }
+
+    .hero__video-btn-box {
+        left: 50%;
+    }
+
+    .hero__stats {
+        flex-wrap: wrap;
+        margin-top: 50px;
+    }
+
+    .sound-familiar__sticky {
+        top: 0;
+    }
+
+    .hero__stats-item img {
+        width: 30px;
+    }
+
+    .sound-familiar__visual {
+        height: 260px;
+    }
+
+
+    .sound-familiar__card {
+        width: 100%;
+        min-height: initial;
+        height: auto;
+    }
+
+    .sound-familiar__content p {
+        line-height: 140%;
+    }
+
+    .sound-familiar__content {
+        padding: 30px;
+    }
+
+    .services__item .services__item-icon {
+        width: 100px;
+        height: 100px;
+    }
+
+    .impact__orbit-img {
+        width: 300px;
+    }
+
+    .impact__accordeon-imgwrapper {
+        display: none;
+    }
+
+    .impact__accordeon-list {
+        min-height: initial;
+    }
+
+    .impact__accordeon-item {
+        padding: 30px;
+    }
+
+    .results-slider__wrapper {
+        padding-left: calc((100vw - 700px) / 2);
+    }
+
+    .trust__headbtn {
+        text-align: left;
+        margin-top: 20px;
+    }
+
+    .section--trust .section__header {
+        position: relative;
+        z-index: 2;
+    }
+
+    .stats-sm,
+    .section--products .row {
+        row-gap: 20px;
+    }
+
+    .testimonials__info {
+        text-align: center;
+    }
+
+    .testimonials__stars {
+        justify-content: center;
+    }
+
+    .testimonials__info h2 {
+        margin-bottom: 20px;
+    }
+
+    .testimonials-sliderwrapper {
+        padding-left: 0;
+    }
+
+    .contacts__info {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .section--contacts {
+        padding: 70px 0;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    .section--hero .btnsgroup {
+        margin-top: 30px;
+    }
+
+    .section--impact .section__header,
+    .experts__header {
+        margin-bottom: 40px;
+    }
+
+    .section--experts h2 {
+        margin-bottom: 20px;
+    }
+
+    .sound-familiar__content h3,
+    .product__title {
+        font-size: 24px;
+    }
+
+    .cqsect__header h4 {
+        font-size: 21px;
+    }
+
+}
+
+@media(max-width:767.8px) {
+    .hero__stats-item {
+        max-width: 100%;
+        flex: 0 0 100%;
+        border-right: none;
+        border-bottom: 1px solid #00715B;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    .scrollact__item:before {
+        width: 40px;
+        height: 40px;
+        right: 0;
+    }
+
+    .scrollact__item {
+        padding-right: 70px;
+    }
+
+    .results-slider__wrapper {
+        padding-left: calc((100vw - 510px) / 2);
+    }
+
+    .results-slider .swiper-slide.swiper-slide-active .results-slider__item .imgwrap {
+        height: 200px;
+    }
+
+    .results-slider__descr .bottinfo .bottinfo__btnwrap {
+        display: block;
+    }
+
+    .results-slider {
+        min-height: initial;
+    }
+
+    .stats-sm__item {
+        min-height: auto;
+    }
+
+    .testimonials__info {
+        margin-bottom: 30px;
+    }
+
+    .experts__photo {
+        height: 300px;
+    }
+
+
+
+
+    .stats-lg__item .title {
+        font-size: 55px;
+    }
+
+}
+
+@media(max-width:575.8px) {
+
+    .section--hero h1 {
+        font-size: 36px;
+    }
+
+    .main-home {
+        padding-top: 70px;
+    }
+
+    .section--hero {
+        padding: 50px 0 30px;
+    }
+
+    .section--hero .btnsgroup a {
+        width: 100%;
+    }
+
+    .hero__video-wrapper {
+        padding: 12px;
+    }
+
+    .hero__video-btn {
+        width: 50px;
+        height: 50px;
+
+        img {
+            width: 24px;
+            height: auto;
+        }
+    }
+
+    .hero__video-btn-ring--sm {
+        width: 100px;
+        height: 100px;
+    }
+
+    .sound-familiar__visual {
+        height: 200px;
+    }
+
+    .sound-familiar__content {
+        padding: 20px;
+    }
+
+    .info__bglines {
+        display: none;
+    }
+
+    .section--info {
+        padding: 50px 0;
+    }
+
+    .section--info__icon {
+        margin-bottom: 10px;
+    }
+
+    .info__scrollbtn svg {
+        width: 20px;
+    }
+
+    .section__header p br {
+        display: none;
+    }
+
+    .services__item .services__item-icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .services__item {
+        height: 220px;
+    }
+
+    .impact__accordeon-item {
+        padding: 10px 20px;
+    }
+
+    .impact__accordeon-body-inner p {
+        line-height: 140%;
+    }
+
+    .results-slider__wrapper {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .results-slider .swiper-slide.swiper-slide-active .results-slider__item .imgwrap,
+    .results-slider__item .imgwrap {
+        height: 160px;
+    }
+
+    .results-slider__arrows {
+        margin-top: 10px;
+    }
+
+    .stats-lg {
+        row-gap: 10px;
+    }
+
+    .testimonials__text {
+        font-size: 16px;
+        font-weight: 300;
+    }
+
+    .testimonials-slider {
+        height: 360px;
+    }
+
+    .testimonials-slider:after,
+    .testimonials-slider:before {
+        height: 10%;
+    }
+
+    .section--products,
+    .section--contacts {
+        border-radius: 20px 20px 0 0;
+    }
+
+    .product__item .description {
+        min-height: 180px;
+    }
+
+    .products__bottomsect,
+    .section--services .centerbtn-wrap {
+        margin-top: 40px;
+    }
+
+    .cqsect__item {
+        padding: 5px 0;
+    }
+
+    .cqsect__header {
+        padding: 16px 50px 16px 10px;
+    }
+
+    .cqsect__icon {
+        right: 10px;
+    }
+
+    .contacts__logo {
+        margin-bottom: 20px;
+    }
+
+    .sevcontact-form {
+        padding: 30px 20px;
+    }
+
+    .sevcontact-form__input, .sevcontact-form__textarea {
+        font-size: 16px;
+        height: 50px;
+    }
+
+    .hero__video-popup-close {
+        width: 30px;
+        height: 30px;
+        top: 10px;
+    }
+
+    .hero__video-popup-video,
+    .hero__video-popup-dialog {
+        border-radius: 16px;
+    }
+
+
+
+
+    .section--impact {
+        border-radius: 20px;
+    }
+
+    .section--experts,
+    .section--impact,
+    .section--products,
+    .section--results,
+    .section--services,
+    .section--startwithproblem,
+    .section--testimonials,
+    .section--trust,
+    .sound-familiar__sticky,
+    .section--faq,
+    .section--contacts {
+        padding: 50px 0;
+    }
+
+    .section--hero h1,
+    .section--startwithproblem h2 {
+        margin-bottom: 20px;
+    }
+
+    .section__header h2 {
+        margin-bottom: 15px;
+    }
+
+    .contacts__info h2,
+    .main-home .testimonials__info h2,
+    .section--experts h2,
+    .section--faq h2,
+    .section--products h2,
+    .section--startwithproblem h2,
+    .section__header h2 {
+        font-size: 32px;
+    }
+
+    .sound-familiar__content h3,
+    .section--info h3,
+    .scrollact__item p {
+        font-size: 21px;
+    }
+
+    .section--sound-familiar .section__header p,
+    .hero__intro p,
+    .section--startwithproblem .description,
+    .section--startwithproblem .subtitle,
+    .product__title {
+        font-size: 18px;
+    }
+
+    .cqsect__header h4,
+    .experts__header p,
+    .sound-familiar__content p,
+    .stats-lg__item p,
+    .stats-sm__item p,
+    .testimonials__info p,
+    .testimonials__role,
+    .testimonials__name {
+        font-size: 16px;
+    }
+
+
+
 }
